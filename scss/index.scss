@@ -3,3 +3,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 
 @import "imports/_reset", "imports/_mixins", "imports/_variables";
+
+.container {
+  padding: 23% 0;
+
+  .wrapper {
+    @include grid;
+    justify-items: center;
+  }
+
+  .card {
+    width: 88%;
+    padding: 14%;
+    &:first-child {
+      border-radius: 1rem 1rem 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    &__sedans {
+      background-color: $bright-orange;
+    }
+
+    &__suvs {
+      background-color: $dark-cyan;
+    }
+
+    &__luxury {
+      background-color: $very-dark-cyan;
+    }
+
+    &__title {
+      font-family: "Big Shoulders Display", cursive;
+      color: $very-light-gray;
+      text-transform: uppercase;
+      padding: 3rem 0;
+      font-size: 3rem;
+    }
+
+    &__text {
+      font-family: "Lexend Deca", sans-serif;
+      color: $transparent-white-paragraphs;
+      line-height: 2.4rem;
+      font-size: 1.5rem;
+    }
+
+    &__btn {
+      background-color: $very-light-gray;
+      height: 5rem;
+      border: 2px solid $very-light-gray;
+      border-radius: 5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.2rem;
+      font-family: "Lexend Deca", sans-serif;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background-color: transparent;
+      }
+
+      &--sedan {
+        text-decoration: none;
+        padding: 0 3rem;
+        font-size: 1.5rem;
+        color: $bright-orange;
+        &:hover {
+          color: $very-light-gray;
+        }
+      }
+
+      &--suvs {
+        text-decoration: none;
+        padding: 0 3rem;
+        font-size: 1.5rem;
+        color: $dark-cyan;
+        &:hover {
+          color: $very-light-gray;
+        }
+      }
+
+      &--luxury {
+        text-decoration: none;
+        padding: 0 3rem;
+        font-size: 1.5rem;
+        color: $very-dark-cyan;
+        &:hover {
+          color: $very-light-gray;
+        }
+      }
+    }
+  }
+}
