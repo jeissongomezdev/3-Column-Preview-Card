@@ -5,7 +5,7 @@
 @import "imports/_reset", "imports/_mixins", "imports/_variables";
 
 .container {
-  padding: 23% 0;
+  @include responsive;
 
   .wrapper {
     @include grid;

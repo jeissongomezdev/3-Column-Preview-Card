@@ -19,6 +19,12 @@ body {
   padding: 23% 0;
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    margin: 0 15%;
+  }
+}
+
 .container .wrapper {
   display: -ms-grid;
   display: grid;
@@ -29,12 +35,25 @@ body {
   justify-items: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .container .wrapper {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+  }
+  .container .wrapper .card {
+    width: 100%;
+    padding: 6.2rem;
+  }
+  .container .wrapper .card:first-child {
+    border-radius: 1rem 0 0 1rem;
+  }
+  .container .wrapper .card:last-child {
+    border-radius: 0 1rem 1rem 0;
+  }
+  .container .wrapper .card__btn {
+    margin-top: 8.5rem;
   }
 }
 
